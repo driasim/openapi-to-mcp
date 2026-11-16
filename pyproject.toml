@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openapi-to-mcp"
+version = "0.1.0"
+description = "Instantly turn any OpenAPI / Swagger REST API into a Model Context Protocol (MCP) server for AI agents"
+authors = [{ name = "Ibrahim Aliyu Saddique", email = "ibraheemaliyu32@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.scripts]
+openapi-to-mcp = "openapi_to_mcp.cli:main"

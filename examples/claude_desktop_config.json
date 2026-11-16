@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "internal-api": {
+      "command": "python",
+      "args": [
+        "-m",
+        "openapi_to_mcp.cli",
+        "serve",
+        "--spec",
+        "https://api.mycompany.internal/openapi.json",
+        "--header",
+        "Authorization: Bearer YOUR_SERVICE_TOKEN_HERE"
+      ]
+    },
+    "petstore-demo": {
+      "command": "python",
+      "args": [
+        "-m",
+        "openapi_to_mcp.cli",
+        "serve",
+        "--spec",
+        "./examples/sample_petstore_spec.json"
+      ]
+    }
+  }
+}
